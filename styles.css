@@ -73,6 +73,14 @@ h2, h3 {
     text-decoration: underline;
 }
 
+/* 11.1 Degradado */
+.lin-gradient {
+    background: linear-gradient(to right, #00992b, #17008c);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
