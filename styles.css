@@ -59,6 +59,12 @@ h2, h3 {
     margin: 0 auto;
 }
 
+/* 9.1. Alineación y subrayado de texto */
+.alin-text {
+    text-align: right;
+    text-decoration: underline;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
