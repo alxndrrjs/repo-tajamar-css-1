@@ -30,6 +30,7 @@ body {
     font-weight: bold;
 }
 
+/* 5.1. div centrado horizontalmente */
 #contenedor {
     background-color: #3b4554;
     margin: auto 70px;
@@ -37,8 +38,19 @@ body {
     justify-content: center;
 }
 
+/* 6.1. Agrupar selectores */
+h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #4A90E2;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
     font-size: 2em;
+}
+
+.subt {
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
