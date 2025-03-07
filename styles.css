@@ -25,6 +25,11 @@ body {
     color: #c536c0;
 }
 
+/* 4.1. Texto en negrita */
+.text-bold {
+    font-weight: bold;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
