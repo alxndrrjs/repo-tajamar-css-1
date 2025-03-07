@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 1 CSS</title>
 
+    <!-- 3.1. Enlace a CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- 2.1. Uso de la etiqueta <style> -->
     <style>
         h1 {
@@ -13,17 +16,29 @@
     </style>
 </head>
 <body>
-    <h1>Ejercicios CSS</h1>
+    <header class="header">
+        <h1 class="titulo">Ejercicios CSS</h1>
+        <br>
+        <hr style="color: #454e5b;">
+    </header>
     
-    <!-- 1. Cambiar color de texto (Inline CSS) -->
-    <h2>Ejercicio 1</h2>
+    <main class="main">
+        <!-- 1. Cambiar color de texto (Inline CSS) -->
+        <h2>Ejercicio 1</h2>
 
-    <p style="color: red;">Este es un párrafo de texto cambiado de color con css inline</p>
+        <p style="color: red;">Este es un párrafo de texto cambiado de color con css inline</p>
+        <br>
+        <!-- 2. Estilos internos (Tag <style>) -->
+        <h2>Ejercicio 2</h2>
 
-    <!-- 2. Estilos internos (Tag <style>) -->
-    <h2>Ejercicio 2</h2>
+        <h1>Texto h1 de color azul</h1>
+        <br>
+        <!-- 3. Enlace a CSS externo -->
+        <h2>Ejercicio 3</h2>
 
-    <h1>Texto h1 de color azul</h1>
-    
+        <p class="text-example">Ejemplo de un texto con estilo definido en un enlace a CSS externo</p>
+        <br>
+    </main>
+
 </body>
 </html>

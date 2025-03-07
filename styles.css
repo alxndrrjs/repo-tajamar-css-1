@@ -1,0 +1,32 @@
+body {
+    background-color: #222831;
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.header {
+    margin: auto;
+    align-content: center;
+    color: #fff;
+    max-width: 600px;
+    padding: 10px 0;
+}
+
+/* 3.1. Texto de ejemplo en css externo */
+.text-example {
+    color: #c536c0;
+}
+
+.titulo {
+    /* text-align: center; */
+    color: #fff;
+    font-size: 2em;
+}
