@@ -30,6 +30,13 @@ body {
     font-weight: bold;
 }
 
+#contenedor {
+    background-color: #3b4554;
+    margin: auto 70px;
+    display: flex;
+    justify-content: center;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
