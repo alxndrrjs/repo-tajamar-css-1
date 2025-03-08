@@ -123,8 +123,109 @@
 
         <!-- 15. Posicionamiento absoluto -->
         <h2 class="subt">Ejercicio 15</h2>
-
         <button class="absoluto">Este botón fue posicionado con el atributo top y no hace nada jaja</button>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- 16. Menú con flexbox -->
+        <h2 class="subt">Ejercicio 16</h2>
+
+        <nav>
+            <ul class="menu">
+
+                <!-- Enlaces -->
+                <li><a href="#" id="1" class="menu-link">Práctica 1 CSS</a></li>
+                <li><a href="https://github.com/alxndrrjs/repo-tajamar-css-1" id="2" class="menu-link" target="_blank">Repositorio</a></li>
+                <li><a href="#" id="3" class="menu-link open">Contacto</a></li>
+
+                <!-- Slider del enlace seleccionado -->
+                <li class="slider"></li>
+
+                <!-- Slider del hover -->
+                <li class="slider-hover"></li>
+            </ul>
+        </nav>
+
+        <!-- Modal con información de contacto -->
+        <dialog class="modal-content">
+            <h2 class="text-modal">Información de contacto</h2>
+            <p class="text-modal">Correo: rojasbarriosalexander@gmail.com</p>
+            <p class="text-modal">Teléfono: +32 645 18 01 13</p>
+            <form method="dialog">
+                <button id="closeDialog" class="close">Cerrar</button>
+            </form>
+        </dialog>
+
+        <script>
+
+            // Enlaces y slider
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const slider = document.querySelector('.slider');
+
+            // Modal de contacto
+            const dialog = document.querySelector("dialog");
+            const closeBtn = document.getElementById('closeDialog');
+            const openButton = document.querySelector(".open");
+
+            const body = document.body;
+        
+            // Posición de la página
+            let scrollPosition = 0;
+
+            // Abrir modal
+            openButton.addEventListener("click", () => {
+
+                // Agregar posición de la página
+                scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+                dialog.showModal(); // Abrir modal
+                
+                // Evitar que la página se desplace hacia arriba
+                body.style.position = 'fixed';
+                body.style.top = `-${scrollPosition}px`;
+                body.style.width = '100%';
+                body.style.overflow = 'hidden';
+            });
+
+            // Cerrar modal
+            closeBtn.addEventListener('click', () => {
+                dialog.close(); // Cerrar el diálogo
+
+                // Restaurar la posición de desplazamiento de la página
+                body.style.position = '';
+                body.style.top = '';
+                body.style.overflow = '';
+                window.scrollTo(0, scrollPosition);  // Restaurar el desplazamiento guardado
+            });
+            
+            // Asignar evento click a cada enlace
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+
+                    // Eliminar clase "active" de todos los enlaces
+                    menuLinks.forEach(l => l.classList.remove('active'));
+
+                    // Añadir clase "active" al enlace seleccionado
+                    link.classList.add('active');
+
+                    // Controla el movimiento del slider y su color
+                    if (link.id === '1') {
+                        slider.style.left = '0';
+                        slider.style.backgroundColor = '#2E5077';
+                        event.preventDefault(); //Evitar que se recargue la página
+                    } else if (link.id === '2') {
+                        slider.style.left = '33.3%';
+                        slider.style.backgroundColor = '#4DA1A9';
+                    } else if (link.id === '3') {
+                        slider.style.left = '66.6%';
+                        slider.style.backgroundColor = '#79D7BE';
+                    }
+                });
+            });
+
+        </script>
         <br>
 
     </main>
