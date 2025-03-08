@@ -100,6 +100,16 @@ h2, h3 {
     margin: 10px;
 }
 
+/* 14.1. div-relativo */
+.div-relativo {
+    position: relative;
+    top: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: #3b4554;
+    margin: 10px;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
