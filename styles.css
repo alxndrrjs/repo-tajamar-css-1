@@ -91,6 +91,15 @@ h2, h3 {
     margin: 0 auto;
 }
 
+/* 13.1. inline-block */
+.div-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #3b4554;
+    margin: 10px;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
