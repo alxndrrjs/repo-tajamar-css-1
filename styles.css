@@ -81,6 +81,16 @@ h2, h3 {
     margin: 10px;
 }
 
+/* 12.1. Círculo */
+.div-radius {
+    border-radius: 50%;
+    background-color: #3b4554;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
