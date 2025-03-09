@@ -483,6 +483,36 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     }
 }
 
+/* 20.1. Pseudo-elementos (::before)  */
+.cont-enlace {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, auto);
+    width: 80%;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.ico-enlace {
+    text-decoration: none;
+    font-size: 18px;
+    color: #249395;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.ico-enlace::before {
+    content: "🔍";  /* Ícono de lupa */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 20px;  /* Tamaño del icono */
+    vertical-align: middle; /* Alineación vertical para que quede centrado con el texto */
+}
+
+.ico-enlace:hover {
+    color: turquoise;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
