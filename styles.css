@@ -816,24 +816,14 @@ a .btn-repo {
     width: 100px;
 }
 
-.center-footer {
-
-}
-
-.hr-main {
-    margin: 0 auto;
-    padding: 0;
-    width: 700px;
-    color: #454e5b;
-}
-
 footer {
     color: white;
     text-align: center; 
     padding: 20px;
-    position: relative;
+    margin: auto;
     bottom: 0;
     overflow: hidden;
+    max-width: 700px;
 }
 
 .subt {
