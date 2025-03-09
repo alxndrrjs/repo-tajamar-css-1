@@ -369,7 +369,7 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     position: absolute;
     top: 50%;
     left: 23%;
-    transform: translate(-14%, -50%);
+    transform: translate(-3%, -50%);
     color: white;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -393,6 +393,43 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 
 .btn-trans-clr:hover {
     background-color: #CD1818;
+}
+
+/* 18.1. Propiedades del contenedor y la caja */
+.cont-anim {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #3b4554;
+    position: relative;
+}
+
+.caja-anim {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    background-color: turquoise;
+    position: absolute;
+    animation: mover 3s ease-in-out infinite; /* Llamar a la animación 'mover' */
+}
+
+/* 18.2. Definición de la animación */
+@keyframes mover {
+    0% {
+        left: 5%;
+    }
+
+    50% {
+        left: 90%;
+    }
+
+    100% {
+        left: 5%;
+    }
 }
 
 .titulo {
