@@ -1,13 +1,17 @@
-
-
-
-
 /* .inter-<uniquifier> {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
   } */
+
+/* Definiendo variables */
+:root {
+    --color-pri: #e24f4f;
+    --color-sec: #5db141;
+    --color-ter: #4a4ec9;
+}
+
 
 body {
     background-color: #222831;
@@ -503,15 +507,32 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 }
 
 .ico-enlace::before {
-    content: "🔍";  /* Ícono de lupa */
+    content: "🔍";
     margin-right: 8px; /* Espacio entre el icono y el texto */
-    font-size: 20px;  /* Tamaño del icono */
-    vertical-align: middle; /* Alineación vertical para que quede centrado con el texto */
+    font-size: 20px;
+    vertical-align: middle; /* Alineación vertical*/
 }
 
 .ico-enlace:hover {
     color: turquoise;
 }
+
+/* 21.1. Propiedades de cada elemento con su respectivo color */
+.color-1 {
+    text-align: center;
+    color: var(--color-pri);
+}
+
+.color-2 {
+    text-align: center;
+    color: var(--color-sec);
+}
+
+.color-3 {
+    text-align: center;
+    color: var(--color-ter);
+}
+
 
 .titulo {
     /* text-align: center; */
