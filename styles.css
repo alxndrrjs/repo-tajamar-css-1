@@ -489,6 +489,18 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     .ico-enlace {
         font-size: 16px !important;
     }
+
+    .btn-trans::after {
+        content: "Michael Jackson";
+        display: inline;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(7.5%, -50%);
+        color: rgb(0, 0, 0);
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
 }
 
 @media (max-width: 542px) {
@@ -672,6 +684,18 @@ div:nth-child(18) {--posicion: 17}
 
 .lobster-rotate:hover {
     transform: rotate(45deg);
+}
+
+/* 23.1. Propiedades de clase cont-shadow */
+.cont-shadow {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    height: 50px;
+    background-color: #249395;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
 }
 
 .titulo {
