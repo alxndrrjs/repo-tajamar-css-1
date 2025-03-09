@@ -10,6 +10,20 @@
     --color-pri: #e24f4f;
     --color-sec: #5db141;
     --color-ter: #4a4ec9;
+
+    /* Variables para la ruleta */
+    --top: 20px;
+    --left: 20px;
+    --tamano: 200px;
+    --tamano-border: 100px;
+    --tamano-centro: 300px;
+    --grados: 20deg;
+    --rotacion: 0deg;
+    --color-impar: rgb(190, 0, 0);
+    --color-par: rgb(0, 0, 0);
+    --color-borde: #ffffff;
+    --color-centro: rgb(70, 45, 18);
+    --color-divisor: rgb(255, 255, 255);
 }
 
 
@@ -346,14 +360,14 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     padding: 10px;
 }
 
-/* 17.1. Cambio de color y texto en un botón */
+/* 17.1. Propiedades de botón Michael Jackson */
 .btn-trans {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: 2px solid transparent;
-    background-color: #116D6E;
-    color: white;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     position: relative;
     transition: all 1s ease;
 }
@@ -364,7 +378,7 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 }
 
 .btn-trans:hover {
-    background-color: #321E1E;
+    background-color: #ffffff;
 }
 
 .btn-trans:hover span {
@@ -372,13 +386,13 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 }
 
 .btn-trans::after {
-    content: "Color y texto cambiado";
+    content: "Michael Jackson";
     display: inline;
     position: absolute;
     top: 50%;
-    left: 23%;
-    transform: translate(-3%, -50%);
-    color: white;
+    left: 30%;
+    transform: translate(-4.5%, -50%);
+    color: rgb(0, 0, 0);
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -466,6 +480,15 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     .absoluto {
         top: 2398px;
     }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ico-enlace {
+        font-size: 16px !important;
+    }
 }
 
 @media (max-width: 542px) {
@@ -533,6 +556,123 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     color: var(--color-ter);
 }
 
+/* 22.1. Content rotate*/
+/* .cont-rotate {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin: 0;
+    width: 95%;
+} */
+
+/* Propiedades de ruleta fea */
+#rulet-fea {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subt-sect {
+    font-family: 'Inter';
+    text-align: center;
+    color: white;
+}
+
+#ruleta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--tamano);height: var(--tamano); 
+    background-color: red;
+    border-radius: 50%;
+    border: calc(var(--tamano-border)/30) solid var(--color-borde);
+    will-change: transform;transition: transform 10s cubic-bezier(0,0,0.3,1);
+    transform: rotate(var(--rotacion));
+    box-shadow: 0px 0px calc(var(--tamano-border)/20) black;
+}
+
+#ruleta:hover {
+  --rotacion: 4000deg;
+}
+
+#ruleta:after {
+  position: absolute;
+  width: calc(var(--tamano-centro)/7.5);height: calc(var(--tamano-centro)/7.5);
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  background-color: var(--color-centro);
+  border-radius: 50%;
+  box-shadow: 0px 0px calc(var(--tamano-border)/20) black;
+}
+
+#divisores div {
+  position: absolute;
+  width: calc(var(--tamano)/40);height: calc(var(--tamano)/2);
+  background-color: var(--color-divisor);
+  transform-origin: 0 0;
+  transform: rotate(calc(var(--grados) / 2 + var(--grados) * var(--posicion))) translate(-50%,-100%);
+}
+
+#sectores {
+  position: absolute;
+  width: var(--tamano);height: var(--tamano);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#sectores div {
+  position: absolute;
+  top: 0%;left: 50%;
+  width: calc(var(--tamano)/2);height: calc(var(--tamano)/2);
+  transform-origin: 0% 100%;
+  transform: rotate(calc(-90deg + var(--grados) / 2 + var(--grados) * var(--posicion))) skew(calc((90deg - var(--grados)) * -1));
+}
+#sectores div::before {
+  position: absolute;
+  width: inherit;height: inherit;
+  border-radius: 0 100% 0 0;
+  background-image: linear-gradient(45deg,var(--color-impar),black);
+  content: "";
+  transform-origin: 0% 100%;
+  transform: skew(90deg - var(--grados));
+}
+#ruleta div:nth-child(even)::before {
+  background-image: linear-gradient(45deg,var(--color-par),black);
+}
+
+div:nth-child(1) {--posicion: 0}
+div:nth-child(2) {--posicion: 1}
+div:nth-child(3) {--posicion: 2}
+div:nth-child(4) {--posicion: 3}
+div:nth-child(5) {--posicion: 4}
+div:nth-child(6) {--posicion: 5}
+div:nth-child(7) {--posicion: 6}
+div:nth-child(8) {--posicion: 7}
+div:nth-child(9) {--posicion: 8}
+div:nth-child(10) {--posicion: 9}
+div:nth-child(11) {--posicion: 10}
+div:nth-child(12) {--posicion: 11}
+div:nth-child(13) {--posicion: 12}
+div:nth-child(14) {--posicion: 13}
+div:nth-child(15) {--posicion: 14}
+div:nth-child(16) {--posicion: 15}
+div:nth-child(17) {--posicion: 16}
+div:nth-child(18) {--posicion: 17}
+
+/* 22.2. Propiedades de Blue lobster */
+.lobster-rotate {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lobster-rotate:hover {
+    transform: rotate(45deg);
+}
 
 .titulo {
     /* text-align: center; */
