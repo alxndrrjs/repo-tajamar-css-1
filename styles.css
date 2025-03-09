@@ -710,6 +710,17 @@ div:nth-child(18) {--posicion: 17}
     margin: 0;
 }
 
+/* 25.1. Propiedades de la clase img-filter */
+.img-center {
+    text-align: center;
+}
+
+.img-filter {
+    height: auto;
+    width: 200px;
+    filter: grayscale(100%);
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
