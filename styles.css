@@ -1,4 +1,7 @@
 
+
+
+
 /* .inter-<uniquifier> {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -207,7 +210,7 @@ h2, h3 {
 .modal-content {
     background-color: #3b4554;
     padding: 20px;
-    border: 0px;
+    border: none;
     border-radius: 5px;
     text-align: center;
 }
@@ -245,7 +248,7 @@ dialog[open]::backdrop {
     background-color: #0008;
     opacity: 1;
 }
-  
+
 @starting-style {
     dialog[open]::backdrop {
         opacity: 0;
@@ -269,6 +272,7 @@ dialog[open]::backdrop {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /* Me tomó un par de horas hacer que la barra de navegación se vea medianamente decente,
 todo para que al final la solución sea mucho más sencilla. Solo por el chiste dejaré las propiedades que había puesto anteriomente */
@@ -325,6 +329,71 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
     background-color: #79D7BE;
 } */
 
+.btns {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+}
+
+/* 17.1. Cambio de color y texto en un botón */
+.btn-trans {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: #116D6E;
+    color: white;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.btn-trans span {
+    display: inline;
+    transition: opacity 1s ease;
+}
+
+.btn-trans:hover {
+    background-color: #321E1E;
+}
+
+.btn-trans:hover span {
+    opacity: 0;
+}
+
+.btn-trans::after {
+    content: "Color y texto cambiado";
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-14%, -50%);
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.btn-trans:hover::after {
+    opacity: 1;
+}
+
+/* 17.2. Cambio de color en un botón */
+.btn-trans-clr {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: #4E3636;
+    color: white;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.btn-trans-clr:hover {
+    background-color: #CD1818;
+}
 
 .titulo {
     /* text-align: center; */
