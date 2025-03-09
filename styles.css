@@ -48,7 +48,7 @@ body {
     align-content: center;
     color: #fff;
     max-width: 700px;
-    padding: 10px 0;
+    padding: 20px;
 }
 
 /* 3.1. Texto de ejemplo en css externo */
@@ -137,10 +137,14 @@ h2, h3 {
 .absoluto {
     position: absolute;
     font-size: medium;
-    bottom: 100px;
+    top: 1px;
     width: 300px;
     height: 50px;
     margin: 10px;
+}
+
+.cont-relat {
+    position: relative;
 }
 
 .cont-abs {
@@ -465,21 +469,21 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 
 /* Media Querys de la clase absoluto */
 @media (min-width: 639px) {
-    .absoluto {
+    /* .absoluto {
         top: 2360px;
-    }
+    } */
 }
 
 @media (max-width: 640px) {
-    .absoluto {
+    /* .absoluto {
         top: 2380.6px;
-    }
+    } */
 }
 
 @media (max-width: 630px) {
-    .absoluto {
+    /* .absoluto {
         top: 2398px;
-    }
+    } */
 
     .btns {
         display: flex;
@@ -504,15 +508,15 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 }
 
 @media (max-width: 542px) {
-    .absoluto {
+    /* .absoluto {
         top: 2417px;
-    }
+    } */
 }
 
 @media (max-width: 492px) {
-    .absoluto {
+    /* .absoluto {
         top: 2437px;
-    }
+    } */
 }
 
 /* 19.2. Media Query para ocultar elemento en pantallas con un ancho menor a 600px */
@@ -760,10 +764,76 @@ div:nth-child(18) {--posicion: 17}
     text-align: center;
 }
 
+/* 27.1. Propiedades de la clase spinner */
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #249395; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: girar 2s linear infinite; /* Animación de giro */
+}
+
+/* Animación con @keyframes */
+@keyframes girar {
+    from {
+        transform: rotate(0deg); /* Comienza en 0 grados */
+    }
+    to {
+        transform: rotate(360deg); /* Gira hasta 360 grados */
+    }
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
     font-size: 2em;
+    padding: 0;
+    margin: 15px 0;
+}
+
+a .btn-repo {
+    text-decoration: none;
+}
+
+.btn-repo {
+    background-color: #249395;
+    color: white;
+    border-radius: 7px;
+    border: 0;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+.section-header {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.img-header {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.center-footer {
+
+}
+
+.hr-main {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    color: #454e5b;
+}
+
+footer {
+    color: white;
+    text-align: center; 
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .subt {

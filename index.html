@@ -22,7 +22,18 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="titulo">Ejercicios CSS</h1>
+        
+        <section class="section-header">
+            <img src="imgs/css-logo.png" alt="css-logo" class="img-header">
+            <div>
+                <h1 class="titulo">Ejercicios CSS</h1>
+                
+                <a href="https://github.com/alxndrrjs/repo-tajamar-css-1" target="_blank">
+                    <button class="btn-repo">Repositorio</button>
+                </a>
+            </div>
+        </section>
+        
         <br>
         <hr style="color: #454e5b;">
     </header>
@@ -123,8 +134,11 @@
         
         <!-- 15. Posicionamiento absoluto -->
         <h2 class="subt">Ejercicio 15</h2>
-        <div class="cont-abs">
-            <button class="absoluto">Este botón fue posicionado con el atributo top y no hace nada jaja</button>
+
+        <div class="cont-relat">
+            <div class="cont-abs">
+                <button class="absoluto">Este botón fue posicionado con el atributo top y no hace nada jaja</button>
+            </div>
         </div>
         <br>
         
@@ -255,11 +269,11 @@
 
         <!-- 20. Pseudo-elementos (::before) -->
         <h2 class="subt">Ejercicio 20</h2>
-
+        
         <div class="cont-enlace">
-            <a href="" class="ico-enlace">Buscar</a>
-            <a href="" class="ico-enlace">Explorar</a>
-            <a href="" class="ico-enlace">Ver más</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="ico-enlace" target="_blank">Buscar</a>
+            <a href="https://matias.me/nsfw/" class="ico-enlace" target="_blank">Explorar</a>
+            <a href="https://i.scdn.co/image/ab67616d0000b27304a2f621e0d6a36c362c6d57" class="ico-enlace" target="_blank">Ver más</a>
         </div>
         <br>
 
@@ -371,10 +385,20 @@
         </div>
         <br>
 
+        <!-- 27. Animación de carga -->
+        <h2 class="subt">Ejercicio 27</h2>
+
+        <div class="cont-overlay">
+            <div class="spinner"></div>
+        </div>
+
     </main>
-
+    <hr class="hr-main">
+    
     <footer>
-
+        <a href="https://github.com/alxndrrjs" target="_blank">
+            <img src="/imgs/github.png" alt="" width="30px">
+        </a>
     </footer>
 </body>
 </html>
