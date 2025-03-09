@@ -721,6 +721,45 @@ div:nth-child(18) {--posicion: 17}
     filter: grayscale(100%);
 }
 
+/* 26.1. Propiedades para el efecto overlay */
+.cont-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-overlay {
+    height: auto;
+    width: 200px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.texto-overlay {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
