@@ -698,6 +698,18 @@ div:nth-child(18) {--posicion: 17}
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* 24.1. Propiedades de clase text-column-2 */
+.text-column-2 {
+    column-count: 2;
+    column-gap: 20px;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+.text-column-2 p {
+    margin: 0;
+}
+
 .titulo {
     /* text-align: center; */
     color: #fff;
