@@ -31,7 +31,7 @@ body {
     background-color: #222831;
     color: #fff;
     font-family: 'Inter';
-    height: 100vh; /* Hacemos que el cuerpo ocupe toda la altura de la ventana */
+    height: 100%; /* Hacemos que el cuerpo ocupe toda la altura de la ventana */
     overflow-x: hidden;
     margin: 0;
     padding: 0;
