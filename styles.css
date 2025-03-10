@@ -84,6 +84,13 @@ h2, h3 {
 }
 
 /* 8.1. div centrado horizontalmente con margin */
+.elm-margen::after {
+    content: "div de 600px de ancho centrado horizontalmente con margin: 0 auto;";
+    background-color: #3b4554;
+    width: 600px;
+    margin: 0 auto;
+}
+
 .elm-margen {
     background-color: #3b4554;
     width: 600px;
@@ -505,6 +512,36 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
         opacity: 0;
         transition: opacity 1s ease-in-out;
     }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    @keyframes mover {
+        0% {
+            left: 5%;
+        }
+    
+        50% {
+            left: 83%;
+        }
+    
+        100% {
+            left: 5%;
+        }
+    }
+
+    .elm-margen::after {
+        content: "div de 300px";
+        background-color: #3b4554;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .elm-margen {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 542px) {
@@ -514,9 +551,19 @@ todo para que al final la solución sea mucho más sencilla. Solo por el chiste 
 }
 
 @media (max-width: 492px) {
-    /* .absoluto {
-        top: 2437px;
-    } */
+
+    .cont-anim {
+
+    }
+
+    .cont-enlace {
+        width: 90% !important;
+        gap: 10px !important;
+    }
+
+    .ico-enlace {
+        font-size: 14px !important;
+    }
 }
 
 /* 19.2. Media Query para ocultar elemento en pantallas con un ancho menor a 600px */
@@ -697,7 +744,7 @@ div:nth-child(18) {--posicion: 17}
     justify-content: center;
     text-align: center;
     width: 60%;
-    height: 50px;
+    height: 60px;
     background-color: #249395;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
 }
